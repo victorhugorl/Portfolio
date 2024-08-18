@@ -1,0 +1,42 @@
+:host {
+    //margin-top: 25px;
+    padding: 25px 0;
+    background: #eee;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .container {
+        padding-bottom: 64px;
+    }
+
+    h3 {
+
+        text-align: center;
+        margin: 0;
+        color: var(--black);
+    }
+
+    ul {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        li {
+            width: 50px;
+            height: 50px;
+            background: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+
+            border-radius: 7px;
+        }
+    }
+}

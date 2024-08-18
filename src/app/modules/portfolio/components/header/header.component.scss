@@ -1,57 +1,186 @@
-$primary-color: #23234bd8;
-$secundary-color: #7baee9;
-$tertiary-color: #4b39ad;
+:host {
 
-header {
-    color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99;
+    .header {
+        transition: 0.3s ease-in-out;
 
-    .container {
-        padding-top: 32px;
-        padding-bottom: 32px;
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
 
-        h2 {
-            color: inherit;
-            text-transform: uppercase;
-            font-size: 32px;
-            font-weight: 900;
+        .header-container {
+            nav {
+                a {
+                    position: relative;
+                    display: inline-block;
+                }
 
-            span {
-                font-weight: 600;
+                a::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 2px;
+                    visibility: hidden;
+                    -webkit-transform: scalex(0);
+                    transform: scaleX(0);
+                    /* Altura da linha */
+                    background-color: var(--white);
+                    /* Cor do sublinhado */
+
+                    -webkit-transition: all 0.3s ease-in-out 0s;
+                    transition: all 0.3s;
+
+                }
+
+
+                a:hover::before {
+                    visibility: visible;
+                    -webkit-transform: scaleX(1);
+                    transform: scaleX(1);
+                }
             }
         }
+    }
 
-        nav {
-            display: grid;
-            gap: 16px;
-            grid-template-columns: repeat(4, auto);
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100% !important;
+        z-index: 98;
+        color: var(--white);
+        transition: 1s ease-in-out;
+
+        .mat-toolbar-single-row {
+            padding: 0;
+            color: var(--white);
+            background: none;
+
+        }
+
+        .mat-toolbar-single-row.background {
+            background-color: #23234bc2;
+
+        }
+
+
+        .header-hidden {
+            transform: translateY(-100%);
+        }
+
+        .container.header-container {
+            transition: transform 1s ease-in-out;
+
+            padding-top: 32px;
+            padding-bottom: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+
+            h2 {
+                color: inherit;
+                text-transform: uppercase;
+                font-size: 32px;
+                font-weight: 900;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            nav {
+                display: grid;
+                gap: 16px;
+                grid-template-columns: repeat(4, auto);
+
+
+
+                a {
+                    color: inherit;
+                    font-size: 20px;
+                    text-decoration: none;
+                }
+            }
 
             @media (max-width: 768px) {
-                display: none;
-            }
+                nav {
+                    display: none;
+                }
 
-            a {
-                color: inherit;
-                font-size: 20px;
-                text-decoration: none;
+
+
+                .mat-icon {
+                    display: block;
+
+
+                }
+            }
+        }
+
+        &.is-scrolling {
+            background-color: var(--primary);
+
+            .container {
+                padding-top: 16px;
+                padding-bottom: 16px;
+
             }
         }
     }
 
-    &.is-scrolling {
-        background-color: $primary-color;
+    .mat-icon {
+        display: none;
 
-        .container {
-            padding-top: 16px;
-            padding-bottom: 16px;
+    }
+
+    mat-drawer {
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .drawer-container {
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+        position: fixed;
+        background: none;
+
+        &.opened {
+            z-index: 99;
+        }
+
+
+        mat-drawer {
+            background-color: var(--primary);
+            border-top-right-radius: 32px;
+            border-bottom-right-radius: 32px;
+
+
+
+            div.content {
+                text-transform: uppercase;
+                padding: 12px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                padding-top: 32px;
+
+                a {
+                    margin-bottom: 32px;
+                }
+            }
+
+
+
 
         }
+
+
     }
+
 }

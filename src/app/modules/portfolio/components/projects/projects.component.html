@@ -1,22 +1,30 @@
-<section class="projects" id="projects">
+<section class="projects" id="Projects">
   <div class="container">
     <h2>Projetos desenvolvidos</h2>
-
     <div class="projects-grid">
+      @for (item of arrayProjects(); track item) {
+
       <div class="project">
         <div class="content">
-          <h3>Project 1</h3>
+          <h3>{{ item.title }}</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-            incidunt sint eum earum, deleniti,
+            {{ item.description }}
           </p>
-          <a href="#" class="button">Learn more</a>
+          <img
+            [src]="item.src"
+            [alt]="item.alt"
+            [attr.width]="item.width"
+            [attr.height]="item.height"
+            loading="lazy"
+          />
+          <a href="#" class="button">Saiba mais</a>
         </div>
       </div>
+      }
     </div>
   </div>
 
   <div class="center">
-    <a href="#" class="button"> View More</a>
+    <a href="#" class="button"> Veja mais</a>
   </div>
 </section>

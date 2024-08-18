@@ -3,6 +3,8 @@
 <main>
   <app-banner></app-banner>
 
+  <app-about></app-about>
+
   <app-knowledge></app-knowledge>
 
   <app-experiences></app-experiences>
@@ -20,37 +22,5 @@
     <h2>Ocorreu um erro no download do componente, tente novamente</h2>
   </section>
   }
-
-  <section class="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <form action="">
-        <div class="form-grid">
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Insira o seu nome."
-            class="form-element"
-          />
-          <input
-            type="text"
-            name="email"
-            id="email"
-            placeholder="Insira o seu melhor e-mail."
-            class="form-element"
-          />
-          <textarea
-            name="message"
-            id="message"
-            placeholder="Nos mande uma mensagem."
-            class="form-area"
-          ></textarea>
-        </div>
-        <div class="right-align">
-          <input type="submit" value="Send Message" class="button" />
-        </div>
-      </form>
-    </div>
-  </section>
+  <app-contact></app-contact>
 </main>

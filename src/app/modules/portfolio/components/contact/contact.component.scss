@@ -1,0 +1,64 @@
+:host {
+    .contact {
+        background: linear-gradient(var(--tertiary), var(--primary));
+
+        .container {
+            padding-top: 64px;
+            padding-bottom: 64px;
+
+            h2 {
+                color: #fff;
+
+            }
+
+            form {
+                display: block;
+                margin: 0 auto;
+                max-width: 600px;
+
+                .form-grid {
+                    display: grid;
+                    gap: 16px;
+                    grid-template-columns: repeat(2, 1fr);
+                    margin-bottom: 16px;
+
+                    @media (max-width: 768px) {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+
+                    .form-element,
+                    .form-area {
+                        appearance: none;
+                        border: none;
+                        outline: none;
+                        background: none;
+
+
+                        display: block;
+                        width: 100%;
+                        background-color: #fff;
+                        border-radius: 8px;
+
+                        padding: 16px;
+                        font-size: 16px;
+                        color: #313131;
+
+                        &::placeholder {
+                            color: #AAA;
+                        }
+
+                    }
+
+                    .form-area {
+                        grid-column: 1/-1;
+                    }
+
+                }
+
+                .right-align {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

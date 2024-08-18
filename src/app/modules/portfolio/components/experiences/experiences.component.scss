@@ -1,0 +1,62 @@
+:host {
+
+
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+        text-align: center;
+        margin: 0 0 25px 0;
+    }
+
+
+
+    /* Para alterar a cor de fundo do cabeçalho do Expansion Panel */
+    .mat-expansion-panel-header {
+        background-color: var(--secondary-011);
+        /* Cor de fundo do cabeçalho */
+    }
+
+    /* Para alterar a cor do título e descrição */
+    .mat-expansion-panel-header .mat-expansion-panel-header-title,
+    .mat-expansion-panel-header-description {
+        color: var(--white);
+    }
+
+
+
+    /* Para alterar a cor da borda do painel */
+    .mat-expansion-panel {
+        border: 0;
+        /* Cor da borda */
+    }
+
+
+    /* Para alterar a cor de fundo do painel colapsado */
+    .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header {
+        background-color: var(--secondary-011);
+        /* Cor de fundo do painel colapsado */
+    }
+
+    .mat-expansion-panel.mat-expanded .mat-expansion-panel-header {
+        background-color: var(--secondary-011);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .mat-expansion-panel-content {
+        margin-top: 10px;
+    }
+
+
+    .content {
+        margin-bottom: 30px;
+    }
+
+
+
+}

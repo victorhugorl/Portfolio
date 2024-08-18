@@ -7,6 +7,8 @@ import { ServiceSectionComponent } from "../../components/service-section/servic
 import { KnowledgeComponent } from "../../components/knowledge/knowledge.component";
 import { ExperiencesComponent } from "../../components/experiences/experiences.component";
 import { ProjectsComponent } from "../../components/projects/projects.component";
+import { AboutComponent } from "../../components/about/about.component";
+import { ContactComponent } from "../../components/contact/contact.component";
 
 @Component({
   selector: "app-home",
@@ -14,10 +16,12 @@ import { ProjectsComponent } from "../../components/projects/projects.component"
   imports: [
     HeaderComponent,
     BannerComponent,
+    AboutComponent,
     ServiceSectionComponent,
     KnowledgeComponent,
     ExperiencesComponent,
     ProjectsComponent,
+    ContactComponent,
   ],
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.scss",

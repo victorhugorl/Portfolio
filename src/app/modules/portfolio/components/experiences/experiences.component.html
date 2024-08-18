@@ -1,14 +1,26 @@
-<div class="container">
-  <h2>Últimas Experiências</h2>
-  @for(item of arrayExperiences(); track item;){
-  <details>
-    <summary>
-      <p>
-        <strong>{{ item.summary.strong }}</strong>
-        {{ item.summary.p }}
-      </p>
-    </summary>
-    <article [innerHTML]="item.text"></article>
-  </details>
-  }
-</div>
+<section>
+  <div class="container">
+    <h2>Últimas Experiências</h2>
+
+    <div class="content">
+      <mat-accordion>
+        @for (item of arrayExperiences(); track item;){
+        <mat-expansion-panel
+          (opened)="panelOpenState.set(true)"
+          (closed)="panelOpenState.set(false)"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> {{ item.summary.strong }} </mat-panel-title>
+            <mat-panel-description>
+              {{ item.summary.p }}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <div [innerHTML]="item.text" class="padding"></div>
+        </mat-expansion-panel>
+
+        }
+      </mat-accordion>
+    </div>
+  </div>
+</section>

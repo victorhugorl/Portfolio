@@ -1,0 +1,102 @@
+:host {
+
+
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: var(--grey-010);
+
+        .container {
+            padding-top: 64px;
+
+            h2 {
+                color: var(--black);
+            }
+        }
+    }
+
+
+
+    div {
+        p {
+            text-align: center;
+        }
+
+        nav ul,
+        section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav {
+            margin: 20px 0;
+
+            ul {
+                li {
+                    a {
+                        width: 250px;
+                    }
+                }
+            }
+        }
+
+        section {
+            figure {
+                width: 335px;
+                height: 77px;
+
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                border: 1px solid var(--grey);
+                border-radius: 7px;
+                margin-bottom: 20px;
+
+                figcaption {
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        flex-direction: column;
+
+                        p {
+                            margin: 3px 0;
+                        }
+
+                        strong {
+                            color: var(--primary);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        @media (max-width: 750px) {
+
+            div nav ul,
+            section {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            section nav ul li,
+            section nav ul li a,
+            section figure {
+                width: 100%;
+            }
+        }
+    }
+
+}

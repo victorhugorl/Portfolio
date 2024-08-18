@@ -1,0 +1,62 @@
+:host {
+    section.banner {
+        color: #fff;
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+
+        background-image: url('../../../../../../public/assets/img/header.jpg');
+        background-position: top right;
+        background-size: cover;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            background-color: var(--primary);
+
+
+
+
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+
+            h1 {
+
+                font-size: 72px;
+                margin-bottom: 32px;
+
+                span {
+                    color: var(--);
+
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 42px;
+                }
+
+
+            }
+        }
+
+        h3 {
+            font-size: 36px;
+            font-weight: 400;
+            margin-bottom: 32px;
+
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
+
+        }
+    }
+}
