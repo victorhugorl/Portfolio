@@ -1,30 +1,19 @@
-<section class="projects" id="Projects">
-  <div class="container">
-    <h2>Projetos desenvolvidos</h2>
-    <div class="projects-grid">
-      @for (item of arrayProjects(); track item) {
+<div class="container">
+  <h2 mat-dialog-title>Projetos desenvolvidos</h2>
 
-      <div class="project">
-        <div class="content">
-          <h3>{{ item.title }}</h3>
-          <p>
-            {{ item.description }}
-          </p>
-          <img
-            [src]="item.src"
-            [alt]="item.alt"
-            [attr.width]="item.width"
-            [attr.height]="item.height"
-            loading="lazy"
-          />
-          <a href="#" class="button">Saiba mais</a>
-        </div>
-      </div>
-      }
-    </div>
-  </div>
-
-  <div class="center">
-    <a href="#" class="button"> Veja mais</a>
-  </div>
-</section>
+  <ul>
+    @for(item of arrayProjects(); track item){
+    <li>
+      <button (click)="openDialog(item)">
+        <img
+          [src]="item.src"
+          [alt]="item.alt"
+          [attr.width]="item.width"
+          [attr.height]="item.height"
+          loading="lazy"
+        />
+      </button>
+    </li>
+    }
+  </ul>
+</div>
