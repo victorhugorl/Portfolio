@@ -109,7 +109,7 @@
 
 
 
-                .mat-icon {
+                .icon {
                     display: block;
 
 
@@ -128,7 +128,7 @@
         }
     }
 
-    .mat-icon {
+    .icon {
         display: none;
 
     }
@@ -151,6 +151,7 @@
 
         &.opened {
             z-index: 99;
+
         }
 
 
@@ -158,6 +159,7 @@
             background-color: var(--primary);
             border-top-right-radius: 32px;
             border-bottom-right-radius: 32px;
+            width: 80%;
 
 
 
