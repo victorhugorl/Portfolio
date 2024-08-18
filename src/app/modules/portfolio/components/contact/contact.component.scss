@@ -44,7 +44,7 @@
                         color: #313131;
 
                         &::placeholder {
-                            color: #AAA;
+                            color: var(--grey);
                         }
 
                     }
